@@ -1,0 +1,106 @@
+
+
+        ***************  Address REST Service Version : 2.0.0 *******************
+
+		***************  address-service port : 9002 *******************
+		
+		*************** Angular Frontend --  address-service-frontend port : 5002 *******************
+
+
+
+
+		
+SpringBoot
+RestController : CRUD @PatchMapping
+Hibernate : CRUD, @NamedQueries
+MySQL: DB connection
+Spring Exceptions
+Spring JUnit Testing
+
+
+
+application.properties 
+	
+	make  spring.jpa.hibernate.ddl-auto=create    only for first time for creating User table in CustomerData
+
+Database : MySQL
+
+SQL Queries : 
+
+    use sparklink_db;
+    show tables;
+
+
+    CREATE TABLE address_master(addressId int NOT NULL auto_increment,employeeId INT NOT NULL,Locality varchar(45) NOT NULL,City varchar(45) NOT NULL,State varchar(45) NOT NULL,Country varchar(45) NOT NULL,zipcode int NOT NULL,addressType varchar(100) NOT NULL, PRIMARY KEY (addressId));
+    DESC address_master;
+    insert into address_master values(3000,1000,"Wagholi","Pune","MH-12","India",412207,"Permanent");
+    insert into address_master values(3001,1001,"Navi Mumbai","Mumbai","MH-01","India",400708,"Current");
+    INSERT INTO address_master VALUES (3002,1034,'Dumdum','Kolkata','West Bengal','India',700066,'Permanent'),(3003,1033,'Chadni Chowk','Noida','Delhi','India',110025,'Permanent'),(3004,1032,'Sadar','Nagpur','Maharashtra','India',44001,'Current'),(3005,1000,'Wagholi','Pune','Maharashtra','India',412207,'Current');
+    SELECT * FROM address_master;
+    drop table address_master;
+
+
+
+
+Start up the application :
+	1. Build and Run the application using Maven Build with   clean install spring-boot:run
+	
+	
+	
+application.properties 
+	
+	make  spring.jpa.hibernate.ddl-auto=none    and rerun the application after first time.
+	
+Url
+
+    http://localhost:9002/rest-api-address-services/getAddressServices
+
+	http://localhost:9002/rest-api-address-services/callAddressServices
+	http://localhost:30902/rest-api-address-services/callAddressServices
+
+  	http://localhost:9002/rest-api-address-services/getAllAddress
+  	http://localhost:30902/rest-api-address-services/getAllAddress
+
+  	http://localhost:9002/rest-api-address-services/getAddressById/3000
+  	http://localhost:30902/rest-api-address-services/getAddressById/3000
+
+  	
+  	@NamedQuery
+	http://localhost:9002/rest-api-address-services/getAddressByCity/Pune
+    http://localhost:30902/rest-api-address-services/getAddressByCity/Pune
+	
+	http://localhost:9002/rest-api-address-services/getAddressByEmployeeID/1000
+	http://localhost:30902/rest-api-address-services/getAddressByEmployeeID/1000
+
+	http://localhost:9002/rest-api-address-services/getAddressByEmployeeIDAddressType/1000/Permanent
+	http://localhost:30902/rest-api-address-services/getAddressByEmployeeIDAddressType/1000/Permanent
+
+	http://localhost:9002/rest-api-address-services/getAddressByAddressType/Permanent
+	http://localhost:30902/rest-api-address-services/getAddressByAddressType/Permanent
+
+	
+	Join
+	
+	  	
+  	Global Exceptions ::
+
+  	http://localhost:9002/rest-api-address-services/getAddressByID/6000
+  	http://localhost:30902/rest-api-address-services/getAddressByID/6000
+
+  	http://localhost:9002/rest-api-address-services/getAddressByCity/Nagpur
+  	http://localhost:30902/rest-api-address-services/getAddressByCity/Nagpur
+
+  	
+  		//------------ Calling from Employee Service --------------------------//
+
+  	http://localhost:9002/rest-api-address-services/getAllAddressEmployeeID
+  	http://localhost:30902/rest-api-address-services/getAllAddressEmployeeID
+
+	http://localhost:9002/rest-api-address-services/getAddressByEmployeeID/1000
+	http://localhost:30902/rest-api-address-services/getAddressByEmployeeID/1000
+
+    	//------------ Calling from Employee Service --------------------------//
+
+   
+   
+   
