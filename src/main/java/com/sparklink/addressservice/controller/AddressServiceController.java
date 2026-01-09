@@ -27,9 +27,22 @@ public class AddressServiceController {
 	
 	@Autowired
 	private AddressService addressService;
-	
+
+
+	//********************************* AWS Address Service Blue Green Deployment Start *********************************************//
+
+	//@GetMapping("/getAddressServicesDeployments")
+	@GetMapping("${rest.get.mapping.getAddressServicesDeployments}")
+	public String getAddressServicesDeployments() {
+		return "AWS - Address Services Working Fine ...";
+	}
+
+
+	//********************************* AWS Address Service Blue Green Deployment Start *********************************************//
+
+
 	//********************************* Address_Master Start *********************************************//
-	
+
 	//@GetMapping("/getAddressServices")
 	@GetMapping("${rest.get.mapping.getAddressServices}")
 	public String getAddressServices() {

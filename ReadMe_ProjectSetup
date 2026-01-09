@@ -53,6 +53,54 @@ application.properties
 	
 Url
 
+
+
+
+
+
+
+
+    //***********  REST API Call *********************//
+
+    Public Facing Port - 8080 : http://localhost:8080/rest-api-address-services/getAddressServicesDeployments
+                                http://localhost:9002/rest-api-address-services/getAddressServicesDeployments
+
+
+	Private Facing Port - 9002 : http://localhost:9002/rest-api-address-services/getAddressServicesDeployments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     http://localhost:9002/rest-api-address-services/getAddressServices
 
 
