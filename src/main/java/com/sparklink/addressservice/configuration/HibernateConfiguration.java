@@ -9,13 +9,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
-/*import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
-import org.springframework.transaction.annotation.EnableTransactionManagement;*/
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-//@EnableTransactionManagement
+@EnableTransactionManagement
 public class HibernateConfiguration {
 
 	Logger logger = LoggerFactory.getLogger("Address Service HibernateConfiguration");
@@ -51,7 +51,7 @@ public class HibernateConfiguration {
 	@Value("${springboot.entitymanager.packagesToScan}")
 	private String PACKAGES_TO_SCAN;
 
-	/*@Bean
+	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 
@@ -89,7 +89,7 @@ public class HibernateConfiguration {
 		HibernateTransactionManager transactionManager = new HibernateTransactionManager();
 		transactionManager.setSessionFactory(sessionFactory().getObject());
 		return transactionManager;
-	}*/
+	}
 
 	@Profile("dev")
 	@Bean

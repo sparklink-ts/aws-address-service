@@ -1,14 +1,14 @@
 package com.sparklink.addressservice.model;
 
-/*import javax.persistence.Column;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.Table;*/
-/*
+import javax.persistence.Table;
+
 
 @NamedQueries(  
 	    {  
@@ -34,52 +34,52 @@ import javax.persistence.Table;*/
 	        )
 	    }  
 	)  
-*/
 
-//@Entity
-//@Table(name="ADDRESS_MASTER")
+
+@Entity
+@Table(name="address_master")
 public class Address_Master {
 
 
-	//@Id
-	//@Column(name="addressId")
-	//@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Id
+	@Column(name="addressId")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int addressId;
 
-	//@Column(name="employeeId")
+	@Column(name="employeeId")
 	private int employeeId;
 
-	//@Column(name="permLocality")
+	@Column(name="permLocality")
 	private String permLocality;
 
-	//@Column(name="permCity")
+	@Column(name="permCity")
 	private String permCity;
 
-	//@Column(name="permState")
+	@Column(name="permState")
 	private String permState;
 
-	//@Column(name="permCountry")
+	@Column(name="permCountry")
 	private String permCountry;
 
-	//@Column(name="permZipcode")
+	@Column(name="permZipcode")
 	private int permZipcode;
 
-	//@Column(name="currLocality")
+	@Column(name="currLocality")
 	private String currLocality;
 
-	//@Column(name="currCity")
+	@Column(name="currCity")
 	private String currCity;
 
-	//@Column(name="currState")
+	@Column(name="currState")
 	private String currState;
 
-	//@Column(name="currCountry")
+	@Column(name="currCountry")
 	private String currCountry;
 
-	//@Column(name="currZipcode")
+	@Column(name="currZipcode")
 	private int currZipcode;
 
-	//@Column(name="addressType")
+	@Column(name="addressType")
 	private String addressType;
 
 

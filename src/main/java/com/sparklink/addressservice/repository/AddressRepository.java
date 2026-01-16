@@ -4,11 +4,11 @@ package com.sparklink.addressservice.repository;
 import java.io.Serializable;
 import java.util.List;
 import java.util.stream.Collectors;
-/*import javax.transaction.Transactional;
+import javax.transaction.Transactional;
 import org.hibernate.Hibernate;
 import org.hibernate.Query;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;*/
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import com.sparklink.addressservice.exception.AddressInfoByCityNotFoundException;
@@ -21,7 +21,7 @@ import com.sparklink.addressservice.exception.RecordNotFoundNullPointerException
 @Repository
 public class AddressRepository {
 	
-	/*@Autowired
+	@Autowired
 	SessionFactory sessionFactory;
 	
 	private String message ="";
@@ -271,7 +271,7 @@ public class AddressRepository {
 		return addressList;
 	}
 	//------------ Calling from Employee Service --------------------------//
-*/
+
 
 
 }

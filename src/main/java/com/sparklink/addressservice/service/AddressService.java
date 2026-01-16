@@ -1,7 +1,7 @@
 package com.sparklink.addressservice.service;
 
 import java.util.List;
-//import javax.transaction.Transactional;
+import javax.transaction.Transactional;
 
 import com.sparklink.addressservice.exception.AddressInfoByIDNotFoundException;
 import com.sparklink.addressservice.exception.NoAddressDataFoundException;
@@ -24,7 +24,7 @@ public class AddressService {
 	
 	// ****************** Calling from FrontController ********************** //
 
-	/*@Transactional
+	@Transactional
 	public List<Address_Master> getAllAddress() {
 		List<Address_Master> addressList = addressRepository.getAllAddress(); 
 		
@@ -122,6 +122,6 @@ public class AddressService {
 		addressRepository.updateAddressById(address, addressId);
 
 	}
-*/
+
 
 }

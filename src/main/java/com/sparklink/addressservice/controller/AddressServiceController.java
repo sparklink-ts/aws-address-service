@@ -1,7 +1,7 @@
 package com.sparklink.addressservice.controller;
 
 import java.util.List;
-//import javax.transaction.Transactional;
+import javax.transaction.Transactional;
 import com.sparklink.addressservice.model.Address_Master;
 import com.sparklink.addressservice.service.AddressService;
 
@@ -59,7 +59,7 @@ public class AddressServiceController {
 
 	// ****************** Calling from FrontController ********************** //
 
-	/*@Transactional
+	@Transactional
 	//@GetMapping("/getAllAddress")
 	@GetMapping("${rest.get.mapping.getAllAddress}")
 	public List<Address_Master> getAllAddress() {
@@ -143,7 +143,7 @@ public class AddressServiceController {
 		return addressService.getAddressByEmployeeID(employeeId);
 	}
 	//------------ Calling from Employee Service --------------------------//
-*/
+
 
 
 
